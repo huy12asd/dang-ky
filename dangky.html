@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    
+</head>
+<body>
+    <section class="login">
+        <form id="registerForm"> <!-- Thêm id vào form -->
+            <h1>Đăng ký</h1>
+            <div class="input-group">
+                <label for="username">Tên đăng nhập</label>
+                <input type="text" id="username" name="username">
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <div> <!-- Đặt input của email vào một div để có thể sử dụng flex-direction: column -->
+                    <input type="email" id="email" name="email">
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="phoneNumber">Số điện thoại</label>
+                <input type="text" id="phoneNumber" name="phoneNumber">
+            </div>
+            <div class="input-group">
+                <label for="dob">Ngày sinh</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+            <div class="input-group">
+                <label>Giới tính</label>
+                <div class="gender-options">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Nam</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Nữ</label>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="city">Tỉnh/Thành phố</label>
+                <input type="text" id="city" name="city">
+            </div>
+            <button type="submit">Đăng ký</button>
+        </form>
+
+    </section>
+    <style>
+        body {
+            display: flex;
+            justify-content: center; /* Căn giữa theo chiều ngang */
+            align-items: center; /* Căn giữa theo chiều dọc */
+            height: 100vh; /* Chiều cao của toàn bộ trình duyệt */
+            margin: 0; /* Loại bỏ margin mặc định của body */
+            background-color: purple;
+        }
+        section.login{
+            background: url('meo dang ky.webp') no-repeat;
+            width: 700px;
+            height: 700px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            border-radius:10px ;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+        form{
+            background: rgba(255, 255, 255, 0.8); /* Thêm một lớp mờ cho form */
+            box-sizing: border-box;
+            width: 50%;
+            padding: 40px;
+            flex-direction: column;
+            display: flex;
+            gap: 20px;
+        }
+        h1{
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        label{
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: rgb(100, 100, 100);
+            
+        }
+        input{
+            width: 200px;
+            border: none;
+            border-bottom: 2px solid #333;
+            padding: 10px 0px;
+            outline: none;
+        }
+        input:focus{
+            border-bottom:2px solid #e0c445 ;
+        }
+
+        button{
+            margin-top: 20px;
+            width: 150px;
+            border: none;
+            background: #333;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+            padding: 10px;
+            box-shadow: 2px 2px 0px #e0c445;
+        }
+        button:hover{
+            background: #e0c445;
+            color: #333;
+        }
+        .gender-options {
+            display: flex;
+            gap: 10px;
+        }
+        .gender-options label {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</body>
+</html>
